@@ -1,0 +1,15 @@
+{
+  "required": true,
+  "package": "ch.exitian.largeorenodesremove.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "minVersion": "0.8",
+  "mixins": [
+    "NoiseGeneratorSettingsMixin"
+  ],
+  "server": [],
+  "client": [],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "refmap": "mixins.largeorenodesremove.refmap.json"
+}
