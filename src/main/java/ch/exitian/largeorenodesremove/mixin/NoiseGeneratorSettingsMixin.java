@@ -9,8 +9,8 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 @Mixin(NoiseGeneratorSettings.class)
 public class NoiseGeneratorSettingsMixin {
 
-    @Inject (method = "oreVeinsEnabled(Lnet/minecraft/world/level/levelgen)", at = @At("HEAD"), cancellable = true)
-    public void oreVeinsEnabled0(CallbackInfoReturnable<Boolean> callback) {
+    @Inject (method = "oreVeinsEnabled", at = @At("HEAD"), cancellable = true)
+    public void oreVeinsEnabled1(CallbackInfoReturnable<Boolean> callback) {
         callback.setReturnValue(false);
     }
 }
