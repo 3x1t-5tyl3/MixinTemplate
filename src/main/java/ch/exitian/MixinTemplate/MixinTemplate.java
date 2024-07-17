@@ -1,4 +1,4 @@
-package ch.exitian.largeorenodesremove;
+package ch.exitian.MixinTemplate;
 
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.Minecraft;
@@ -24,10 +24,10 @@ import net.minecraftforge.registries.RegistryObject;
 import org.slf4j.Logger;
 
 // The value here should match an entry in the META-INF/mods.toml file
-@Mod(LargeOreNodesRemove.MODID)
-public class LargeOreNodesRemove
+@Mod(MixinTemplate.MODID)
+public class MixinTemplate
 {
-    public static final String MODID = "largeorenodesremove";
+    public static final String MODID = "mixintemplate";
     private static final Logger LOGGER = LogUtils.getLogger();
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, MODID);
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, MODID);
@@ -37,7 +37,7 @@ public class LargeOreNodesRemove
     // Creates a new BlockItem with the id "examplemod:example_block", combining the namespace and path
     public static final RegistryObject<Item> EXAMPLE_BLOCK_ITEM = ITEMS.register("example_block", () -> new BlockItem(EXAMPLE_BLOCK.get(), new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS)));
 
-    public LargeOreNodesRemove()
+    public MixinTemplate()
     {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
